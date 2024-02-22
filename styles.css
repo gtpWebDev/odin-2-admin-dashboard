@@ -5,7 +5,7 @@
 
 
 body {
-  font-size: 26px;
+  font-size: 16px;
   font-family: var(--system-ui);
 }
 
@@ -20,13 +20,13 @@ body {
 }
 
 #side-dashboard {
-  background-color: lightblue;
+  background-color: rgb(31, 178, 227);
   grid-column: 1;
   grid-row: 1 / -1;
   padding: 30px;
   display: grid;
   grid-template-rows: auto auto auto;
-  row-gap: 80px;
+  row-gap: 60px;
   align-content: start;
 }
 
@@ -42,6 +42,43 @@ body {
   grid-row: 2;
 }
 
-#dashboard-logo {
-  
+
+#dashboard-logo, #dashboard-navigation, #dashboard-settings {
+  display: grid;
+  row-gap: 20px;
 }
+
+#dashboard-navigation {
+  grid-template-rows: repeat(6, 1fr);
+}
+
+#dashboard-settings {
+  grid-template-rows: repeat(3, 1fr);
+}
+
+
+.dash-option-container, .dash-header-container {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 15px;
+  justify-items: left;
+}
+
+.dash-option-img, .dash-header-img {
+  grid-column: 1;
+  place-self: center;
+  width: 20px;
+  height: 20px;
+}
+
+.dash-option-link, .dash-header-link {
+  grid-column: 2;
+  color: white;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+.dash-header-link {
+  font-size: 30px;
+}
+
